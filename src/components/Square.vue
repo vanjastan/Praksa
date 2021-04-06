@@ -1,32 +1,28 @@
 <template>
-  <v-container>
-   <div class="square1"></div>
-   <div class="square2"></div>
-   <div class="square3"></div>
-  </v-container>
+  <v-container style="height:100%;">
+   <div class="parent">
+   <div class="square"></div>
+   <div class="square"></div>
+   <div class="square"></div>
+   </div>
+   </v-container>
 </template>
 
 <style>
-.square1 {
-  height: 200px;
-  width: 200px;
-  background-color: #0D48E0;
-  margin-top:10%;
+.square {
+  height: 250px;
+  width: 250px;
+  background-color: #0D48E0; 
 }
 
-.square2 {
-  height: 200px;
-  width: 200px;
-  background-color: #0D48E0;
-  margin-top:10%;
+.parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
 }
 
-.square3 {
-  height: 200px;
-  width: 200px;
-  background-color: #0D48E0;
-  margin-top:10%;
-}
 </style>
 
 <script>
