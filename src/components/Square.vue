@@ -1,9 +1,9 @@
 <template>
   <v-container style="height:100%;">
    <div class="parent">
-   <div class="square"></div>
-   <div class="square"></div>
-   <div class="square"></div>
+   <div id="1" class="square" v-on:click="select($event)"></div>
+   <div id="2" class="square" v-on:click="select($event)"></div>
+   <div id="3" class="square" v-on:click="select($event)"></div>
    </div>
    </v-container>
 </template>
@@ -13,6 +13,9 @@
   height: 250px;
   width: 250px;
   background-color: #0D48E0; 
+  color: white;
+  font-size: 150px;
+  text-align: center;
 }
 
 .parent {
@@ -30,7 +33,13 @@
     name: 'Square',
 
     data: () => ({
-
     }),
+
+    methods: {
+        select: function(event) {
+            var clicked = event.currentTarget.id;
+            document.getElementById("2").innerHTML = clicked;
+        },
+    }
   }
 </script>
