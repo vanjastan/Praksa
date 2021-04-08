@@ -70,12 +70,12 @@
             }
 
             if(id === 1) {
-                this.squares[1].number = "1";
+                this.squares[1].number = id;
             }
             else if (id === 2) {
-                this.squares[1].number = "2";
+                this.squares[1].number = id;
             }
-            else this.squares[1].number = "3";
+            else this.squares[1].number = id;
         }
     }
   }
