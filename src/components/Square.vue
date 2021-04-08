@@ -6,7 +6,7 @@
    v-bind:style="{'background-color':sqr.color}"
    v-on:click="changeColor(sqr.id)"
    :key="sqr.id"
-   class="square">
+   class="square"><p class="number">{{sqr.number}}</p>
    </div>
    </div>
   </v-container>
@@ -23,6 +23,13 @@
    .square {
      height: 270px;
      width: 270px;
+   }
+
+   .number {
+       font-size: 150px;
+       display: flex;
+       color: white;
+       justify-content: space-around;
    }
 
 </style>
@@ -61,6 +68,14 @@
                 }
                 else this.squares[i].color = "blue";
             }
+
+            if(id === 1) {
+                this.squares[1].number = "1";
+            }
+            else if (id === 2) {
+                this.squares[1].number = "2";
+            }
+            else this.squares[1].number = "3";
         }
     }
   }
